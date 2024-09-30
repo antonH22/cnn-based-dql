@@ -96,7 +96,7 @@ def game_events_occurred(self, old_game_state: dict, self_action: str, new_game_
 
     # Check for a loop in the action history
     if any(event.startswith('MOVE') for event in events):
-        if self.action_history[0] == self.action_history[2] and self.action_history[0] != self.action_history[1]:
+        if len(self.action_history) == 3 and self.action_history[0] == self.action_history[2] and self.action_history[0] != self.action_history[1]:
             events.append(LOOP)
         else:
             events.append(NO_LOOP)
