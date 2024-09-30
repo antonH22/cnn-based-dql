@@ -1,0 +1,2 @@
+LOOP = "LOOP"
+NO_LOOP = "NO_LOOP"
